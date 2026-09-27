@@ -3,7 +3,8 @@ package helper
 import (
 	"fmt"
 	"testing"
-	"github.com/stretchr/testify/assert"
+	// "github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 // func TestHelloWorld(t *testing.T) {
@@ -55,9 +56,16 @@ import (
 // }
 
 // pake testify assertion
-func TestHelloWorldAssert(t *testing.T) {
-	result := HelloWorld("Budi")
-	assert.Equal(t, "Hello Budi", result, "Result must be 'Hello Budi'")
+// func TestHelloWorldAssert(t *testing.T) {
+// 	result := HelloWorld("Budi")
+// 	assert.Equal(t, "Hello Budi", result, "Result must be 'Hello Budi'")
 
-	fmt.Println("Test Hello World Assert Selesai")	
+// 	fmt.Println("Test Hello World Assert Selesai")	
+// }
+
+func TestHelloWorldRequire(t *testing.T) {
+	result := HelloWorld("Budi")
+	require.Equal(t, "Hello Budi", result, "Result must be 'Hello Budi'")
+
+	fmt.Println("Test Hello World Require Selesai")	
 }
