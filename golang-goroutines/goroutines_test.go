@@ -25,7 +25,7 @@ func DisplayNumber(number int) {
 
 
 func TestManyGoroutines(t *testing.T) {
-	for i := 0; i < 100000; i++ {
+	for i := range 100000 {
 		go DisplayNumber(i)
 	}
 
